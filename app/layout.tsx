@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
+import { League_Spartan } from "next/font/google"
+
+const leagueSpartan = League_Spartan({
+  weight: '600',
+  subsets: ['latin'],
+  variable: '--font-league',
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${leagueSpartan.variable} ${leagueSpartan.variable} antialiased`}
       >
         {children}
       </body>
